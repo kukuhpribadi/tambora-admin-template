@@ -1,20 +1,18 @@
-import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 
-const LinkSidebar = ({ icon, nama, arrow, childMenu }) => {
+const LinkSidebar = ({ icon, nama, childMenu }) => {
   const [openMenu, setOpenMenu] = useState(false);
 
   function clickMenu() {
-    if (arrow) setOpenMenu(!openMenu);
+    if (childMenu) setOpenMenu(!openMenu);
   }
-
-  console.log(childMenu);
 
   return (
     <>
       <div
-        className="flex w-full text-white pl-3 pr-5 cursor-pointer"
+        className="flex w-full text-white pl-3 pr-5 cursor-pointer items-center"
         onClick={clickMenu}
       >
         <div className="w-1/4 flex justify-center items-center">
@@ -23,8 +21,8 @@ const LinkSidebar = ({ icon, nama, arrow, childMenu }) => {
         <div className="w-full flex justify-between select-none">
           <div>{nama}</div>
           <div>
-            {arrow && (
-              <FontAwesomeIcon icon={!openMenu ? faAngleRight : arrow} />
+            {childMenu && (
+              <FontAwesomeIcon icon={!openMenu ? faAngleRight : faAngleDown} />
             )}
           </div>
         </div>
