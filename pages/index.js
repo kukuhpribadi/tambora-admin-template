@@ -7,6 +7,7 @@ export default function Home() {
       <Sidebar />
       <div className="w-full">
         <Navbar />
+        <h1>Beranda</h1>
       </div>
     </div>
   );

@@ -1,13 +1,7 @@
-import React, { useEffect, useState } from "react";
 import LinkSidebar from "../components/LinkSidebar";
 import {
-  faAngleDown,
-  faFile,
   faFileAlt,
   faHome,
-  faIdBadge,
-  faNewspaper,
-  faPaperPlane,
   faPuzzlePiece,
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -21,16 +15,16 @@ const Sidebar = () => {
       {/* menu wrapper */}
       <div className=" w-full flex flex-col gap-7">
         {/* menu */}
-        <LinkSidebar icon={faHome} nama="Beranda" />
+        <LinkSidebar icon={faHome} nama="beranda" />
         <LinkSidebar
           icon={faPuzzlePiece}
           nama="Komponen"
-          childMenu={["Badge", "Button", "Card", "Badge"]}
+          childMenu={["badge", "button", "card", "search"]}
         />
         <LinkSidebar
           icon={faFileAlt}
-          nama="Halaman"
-          childMenu={["Blank", "404", "Login", "Register"]}
+          nama="halaman"
+          childMenu={["blank", "404", "login", "register"]}
         />
       </div>
     </div>
