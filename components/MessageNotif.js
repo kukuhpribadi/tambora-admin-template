@@ -13,7 +13,7 @@ const MessageNotif = ({ openMessageNotif }) => {
     <div
       className={
         openMessageNotif
-          ? "w-80 absolute bg-white shadow top-11 right-0 rounded-md overflow-hidden"
+          ? "w-96 absolute bg-white shadow-md top-11 right-0 rounded-md overflow-hidden"
           : "hidden"
       }
     >
@@ -30,7 +30,7 @@ const MessageNotif = ({ openMessageNotif }) => {
         <div className="flex min-h-16 border-b border-gray-100 py-2">
           {/* profile */}
           <div className="w-1/4  flex items-center justify-center text-4xl relative">
-            <div className="absolute w-3 h-3 bottom-0 right-2 rounded-full bg-green-500 z-10"></div>
+            <div className="absolute w-3 h-3 bottom-0 right-3.5 rounded-full bg-green-500 border-2 border-white z-10"></div>
             <div className="w-12 h-12 overflow-hidden rounded-full">
               <Image
                 src="/img/img-profile3.jpg"
@@ -50,7 +50,7 @@ const MessageNotif = ({ openMessageNotif }) => {
               <div className="w-full">
                 Lorem ipsum dolor sit amet consectetur adipisicing . . .
               </div>
-              <div className="w-3 text-green-500 flex-none">
+              <div className="pl-2 text-green-500 flex-none">
                 <FontAwesomeIcon icon={faCheck} />
               </div>
             </div>
@@ -59,7 +59,7 @@ const MessageNotif = ({ openMessageNotif }) => {
         <div className="flex min-h-16 border-b border-gray-100 py-2">
           {/* profile */}
           <div className="w-1/4  flex items-center justify-center text-4xl relative">
-            <div className="absolute w-3 h-3 bottom-0 right-2 rounded-full bg-red-500 z-10"></div>
+            <div className="absolute w-3 h-3 bottom-0 right-3.5 rounded-full bg-red-500 border-2 border-white z-10"></div>
             <div className="w-12 h-12 overflow-hidden rounded-full">
               <Image
                 src="/img/img-profile2.jpg"
@@ -76,11 +76,11 @@ const MessageNotif = ({ openMessageNotif }) => {
               <div className="text-gray-400 italic">4jam lalu</div>
             </div>
             <div className="flex">
-              <div className="w-full">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio,
+              <div className="w-full ">
+                Lorem ipsum dolor sit amet, consectetur adipi elit. Odio,
                 perferendis . . .
               </div>
-              <div className="w-3 text-green-500 flex-none">
+              <div className=" pl-2 text-green-500 flex-none">
                 <FontAwesomeIcon icon={faCheckDouble} />
               </div>
             </div>

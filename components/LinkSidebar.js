@@ -5,15 +5,18 @@ import Link from "next/link";
 
 const LinkSidebar = ({ icon, nama, childMenu }) => {
   const [openMenu, setOpenMenu] = useState(false);
-  const [url, setUrl] = useState("/");
+  const [url, setUrl] = useState("#");
 
-  function clickMenu() {
+  useState(() => {
+    if (nama === "beranda") setUrl(`/`);
+  }, []);
+
+  const clickMenu = () => {
     if (childMenu) {
       setOpenMenu(!openMenu);
       setUrl("#");
     }
-    // if (!childMenu && nama === "beranda") setUrl(`/`);
-  }
+  };
 
   return (
     <>
@@ -26,7 +29,7 @@ const LinkSidebar = ({ icon, nama, childMenu }) => {
             <FontAwesomeIcon icon={icon} />
           </div>
           <div className="w-full flex justify-between select-none">
-            <div className="capitalize">{nama}</div>
+            <div className="capitalize ">{nama}</div>
             <div>
               {childMenu && (
                 <FontAwesomeIcon

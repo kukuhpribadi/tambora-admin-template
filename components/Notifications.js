@@ -1,9 +1,4 @@
-import {
-  faBug,
-  faEllipsisH,
-  faEnvelopeOpenText,
-  faSmileBeam,
-} from "@fortawesome/free-solid-svg-icons";
+import { faBug, faEllipsisH } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
@@ -37,7 +32,7 @@ const Notifications = ({ openNotif }) => {
         </div>
         <div className="flex h-min-16 border-b border-gray-100">
           <div className="w-1/3  text-green-700 flex items-center justify-center text-4xl">
-            <FontAwesomeIcon icon={faSmileBeam} />
+            🖖
           </div>
           <div className="w-full px-1 py-2 flex flex-col justify-center gap-1">
             <div className="text-xs ">
