@@ -56,8 +56,8 @@ const Myteam = () => {
         </div>
       </div>
       {/* body */}
-      <div className="px-5 pb-5 flex flex-col gap-5">
-        <table class="table-auto">
+      <div className="px-5 pb-5 flex flex-col gap-5  overflow-x-auto scrollbar-thin scrollbar-thumb-rounded scrollbar-track-gray-100 scrollbar-thumb-gray-200">
+        <table class="table-auto ">
           <thead>
             <tr className="text-left h-12">
               <th>Nama</th>

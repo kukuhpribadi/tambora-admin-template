@@ -7,13 +7,15 @@ import {
 
 const Sidebar = () => {
   return (
-    <div className="w-1/5 bg-red-500 flex flex-col items-center gap-10">
+    <div className="w-1/5 bg-red-500 hidden md:flex flex-col items-center gap-10">
       {/* brand */}
       <div className=" h-16 w-full flex items-center justify-center">
-        <h1 className="font-extrabold text-white md:text-4xl">tambora.</h1>
+        <h1 className="font-extrabold text-white md:text-2xl lg:text-4xl">
+          tambora.
+        </h1>
       </div>
       {/* menu wrapper */}
-      <div className="w-full flex flex-col gap-7">
+      <div className="w-full flex flex-col gap-7 text-sm lg:text-base">
         {/* menu */}
         <LinkSidebar icon={faHome} nama="beranda" />
         <LinkSidebar
