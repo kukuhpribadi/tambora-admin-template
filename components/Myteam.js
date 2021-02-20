@@ -57,7 +57,7 @@ const Myteam = () => {
       </div>
       {/* body */}
       <div className="px-5 pb-5 flex flex-col gap-5  overflow-x-auto scrollbar-thin scrollbar-thumb-rounded scrollbar-track-gray-100 scrollbar-thumb-gray-200">
-        <table class="table-auto ">
+        <table className="table-auto">
           <thead>
             <tr className="text-left h-12">
               <th>Nama</th>
@@ -70,7 +70,7 @@ const Myteam = () => {
           <tbody>
             {/* team list */}
             {people.map((person) => {
-              return <MyteamList data={person} />;
+              return <MyteamList data={person} key={person.id} />;
             })}
           </tbody>
         </table>
