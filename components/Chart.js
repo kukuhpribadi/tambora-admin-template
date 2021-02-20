@@ -63,7 +63,7 @@ const Chart = () => {
       </div>
       {/* body */}
       <div className="px-5 pt-2 pb-5 flex flex-col gap-10">
-        <div className="flex justify-between">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 ">
           <ChartInfo
             icon={faChartLine}
             warna="green"

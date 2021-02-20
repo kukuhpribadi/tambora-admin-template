@@ -6,6 +6,7 @@ import Chart from "../components/Chart";
 import Navbar from "../layouts/Navbar";
 import Sidebar from "../layouts/Sidebar";
 import Image from "next/image";
+import Note from "../components/Note";
 
 export default function Home() {
   return (
@@ -18,9 +19,11 @@ export default function Home() {
           <div className="lg:col-span-2 ">
             <Chart />
           </div>
-          <div>
-            {/* card */}
+          <div className="flex flex-col gap-3">
+            {/* todo */}
             <Todo />
+            {/* Note */}
+            <Note />
           </div>
         </section>
         <section className="grid grid-cols-1 lg:grid-cols-3 px-5 gap-5 mt-5">

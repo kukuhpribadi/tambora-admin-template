@@ -40,7 +40,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <div className="h-16 w-full shadow-md flex items-center justify-between px-5 bg-white">
+      <div className="h-16 w-full shadow-md flex items-center justify-between px-2 lg:px-5 bg-white">
         {/* left menu */}
         <div className="w-52 h-8 flex items-center bg-gray-100 rounded-full overflow-hidden text-gray-500 text-sm">
           <div className="w-8 h-full flex items-center justify-center pl-2">
@@ -55,7 +55,7 @@ const Navbar = () => {
           </div>
         </div>
         {/* right  menu */}
-        <div className="flex flex-row gap-10 text-gray-500 items-center">
+        <div className="flex flex-row gap-5 lg:gap-10 text-gray-500 items-center">
           {/* noitification */}
           <div className="flex gap-5">
             <div className="select-none relative" onClick={clickNotification}>

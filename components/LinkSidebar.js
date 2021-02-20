@@ -22,13 +22,13 @@ const LinkSidebar = ({ icon, nama, childMenu }) => {
     <>
       <Link href={url}>
         <a
-          className="flex w-full text-white  cursor-pointer items-center justify-end px-2 lg:px-5"
+          className="flex w-full text-white cursor-pointer items-center justify-center md:px-2 lg:px-5"
           onClick={clickMenu}
         >
           <div className="w-1/4">
             <FontAwesomeIcon icon={icon} />
           </div>
-          <div className="w-full flex justify-between select-none">
+          <div className="w-full hidden md:flex justify-between select-none">
             <div className="capitalize">{nama}</div>
             <div>
               {childMenu && (
