@@ -1,5 +1,6 @@
 import LinkSidebar from "../components/LinkSidebar";
 import {
+  faEnvelope,
   faFileAlt,
   faHome,
   faMountain,
@@ -21,6 +22,7 @@ const Sidebar = () => {
       <div className="w-full flex flex-col gap-7 text-lg md:text-sm lg:text-base">
         {/* menu */}
         <LinkSidebar icon={faHome} nama="beranda" />
+        <LinkSidebar icon={faEnvelope} nama="pesan" notifIcon="15" />
         <LinkSidebar
           icon={faPuzzlePiece}
           nama="Komponen"
