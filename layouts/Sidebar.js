@@ -2,6 +2,7 @@ import LinkSidebar from "../components/LinkSidebar";
 import {
   faEnvelope,
   faFileAlt,
+  faHeart,
   faHome,
   faMountain,
   faPuzzlePiece,
@@ -10,7 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Sidebar = () => {
   return (
-    <div className="w-1/6 bg-red-500 flex flex-col items-center gap-5">
+    <div className="w-1/6 flex-none bg-red-500 flex flex-col items-center gap-5">
       {/* brand */}
       <div className="h-16 lg:h-20 w-full flex items-center justify-center text-white ">
         <h1 className="font-extrabold hidden md:flex md:text-xl lg:text-4xl">
@@ -26,13 +27,14 @@ const Sidebar = () => {
         <LinkSidebar
           icon={faPuzzlePiece}
           nama="Komponen"
-          childMenu={["badge", "button", "card", "search"]}
+          childMenu={["card"]}
         />
         <LinkSidebar
           icon={faFileAlt}
           nama="halaman"
           childMenu={["blank", "404", "login", "register"]}
         />
+        <LinkSidebar icon={faHeart} nama="terimakasih" />
       </div>
     </div>
   );

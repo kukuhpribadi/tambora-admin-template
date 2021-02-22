@@ -22,13 +22,13 @@ const pesan = () => {
       <div className="w-full">
         <Navbar />
         {/* Main content */}
-        <section className="h-screen px-5 mt-5 text-gray-600">
-          <div className="h-3/4 rounded-md overflow-hidden shadow-md bg-white flex">
+        <section className="px-5 mt-5 text-gray-600">
+          <div className="rounded-md overflow-hidden shadow-md bg-white flex">
             {/* sidebar chat */}
-            <div className="w-1/5 text-sm py-3 flex flex-none flex-col gap-7 shadow-md">
+            <div className="w-1/5 text-sm py-5 flex flex-none flex-col gap-7 shadow-md">
               {/* head */}
               <div className="px-5">
-                <h1 className="font-bold">Pesan</h1>
+                <h1 className="font-bold text-base">Pesan</h1>
               </div>
               <div className="mx-5 bg-red-500 text-center cursor-pointer text-sm text-white font-semibold rounded-md shadow-md py-1">
                 + Buat pesan
@@ -63,9 +63,9 @@ const pesan = () => {
               </div>
             </div>
             {/* main content */}
-            <div className="w-full flex flex-col gap-5 px-5">
+            <div className="w-full flex flex-col gap-5 px-5 py-5">
               {/* head */}
-              <div className="flex justify-between py-3">
+              <div className="flex justify-between">
                 <h1 className="font-bold">Kotak masuk</h1>
                 <div>{/* <FontAwesomeIcon icon={faEllipsisH} /> */}</div>
               </div>

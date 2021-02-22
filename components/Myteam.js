@@ -38,8 +38,8 @@ const Myteam = () => {
     {
       id: 4,
       img: "/img/img-profile5.jpg",
-      nama: "Sudar Mangun Kusuma",
-      sosmed: "@radusnugnam",
+      nama: "Kartika Dewi",
+      sosmed: "@kartika",
       asal: "Semarang",
       jabatan: "UI / UX",
       gaji: "40rb/jam",
