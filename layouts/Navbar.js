@@ -11,33 +11,58 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Notifications from "../components/Notifications";
 import MessageNotif from "../components/MessageNotif";
+import ProfileNotification from "../components/ProfileNotification";
 
 const Navbar = () => {
   const [notification, setNotification] = useState(false);
   const [messageNotif, setmessageNotif] = useState(false);
-  const [profile, setProfile] = useState(false);
+  const [profileNotif, setProfileNotif] = useState(false);
 
-  const clickNotification = () => {
-    setNotification(!notification);
-    setmessageNotif(false);
-    setProfile(false);
-  };
+  // ref
+  const refNotification = useRef();
+  const refMessage = useRef();
+  const refProfile = useRef();
 
-  const clickMessageNotif = () => {
-    setmessageNotif(!messageNotif);
-    setNotification(false);
-    setProfile(false);
-  };
+  useEffect(() => {
+    const handler = (event) => {
+      if (!refNotification.current.contains(event.target)) {
+        setNotification(false);
+      }
+    };
+    document.addEventListener("click", handler);
+    return () => {
+      document.removeEventListener("click", handler);
+    };
+  }, [notification]);
 
-  const clickProfile = () => {
-    setProfile(!profile);
-    setmessageNotif(false);
-    setNotification(false);
-  };
+  useEffect(() => {
+    const handler = (event) => {
+      if (!refMessage.current.contains(event.target)) {
+        setmessageNotif(false);
+      }
+    };
+    document.addEventListener("click", handler);
+    return () => {
+      document.removeEventListener("click", handler);
+    };
+  }, [messageNotif]);
+
+  useEffect(() => {
+    const handler = (event) => {
+      if (!refProfile.current.contains(event.target)) {
+        setProfileNotif(false);
+      }
+    };
+    document.addEventListener("click", handler);
+    return () => {
+      document.removeEventListener("click", handler);
+    };
+  }, [profileNotif]);
+
   return (
     <>
       <div className="h-16 w-full shadow-md flex items-center justify-between px-2 lg:px-5 bg-white">
@@ -58,56 +83,36 @@ const Navbar = () => {
         <div className="flex flex-row gap-5 lg:gap-10 text-gray-500 items-center">
           {/* noitification */}
           <div className="flex gap-5">
-            <div className="select-none relative" onClick={clickNotification}>
-              <FontAwesomeIcon
-                icon={faBell}
-                className="cursor-pointer icon-menu"
-              />
+            <div className="select-none relative" ref={refNotification}>
+              <div onClick={() => setNotification(!notification)}>
+                <FontAwesomeIcon
+                  icon={faBell}
+                  className="cursor-pointer icon-menu"
+                />
+              </div>
               {/* menu dropdown */}
-              <Notifications openNotif={notification} />
+              {notification && <Notifications />}
             </div>
-            <div className="relative" onClick={clickMessageNotif}>
+            {/* message */}
+            <div className="relative" ref={refMessage}>
               <div className="absolute top-0.5 -right-1 w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-              <FontAwesomeIcon
-                icon={faEnvelope}
-                className="cursor-pointer icon-menu"
-              />
+              <div onClick={() => setmessageNotif(!messageNotif)}>
+                <FontAwesomeIcon
+                  icon={faEnvelope}
+                  className="cursor-pointer icon-menu"
+                />
+              </div>
               {/* message dropdown */}
-              <MessageNotif openMessageNotif={messageNotif} />
+              {messageNotif && <MessageNotif />}
             </div>
           </div>
           {/* profile */}
           <div
             className="flex items-center gap-2 cursor-pointer relative"
-            onClick={clickProfile}
+            onClick={() => setProfileNotif(!profileNotif)}
+            ref={refProfile}
           >
-            {/* profile menu */}
-            <div
-              className={
-                profile
-                  ? "w-32 absolute bg-white shadow-md  top-12 right-0 rounded-md overflow-hidden flex flex-col py-3 px-3 gap-3 z-50"
-                  : "hidden"
-              }
-            >
-              <div className="flex">
-                <div className="w-1/4 flex justify-center items-center text-green-500">
-                  <FontAwesomeIcon icon={faSmile} />
-                </div>
-                <div className="px-2 text-sm">Aktif</div>
-              </div>
-              <div className="flex">
-                <div className="w-1/4 flex justify-center items-center">
-                  <FontAwesomeIcon icon={faUser} />
-                </div>
-                <div className="px-2 text-sm">Profile</div>
-              </div>
-              <div className="flex">
-                <div className="w-1/4 flex justify-center items-center">
-                  <FontAwesomeIcon icon={faSignOutAlt} />
-                </div>
-                <div className="px-2 text-sm">Sign Out</div>
-              </div>
-            </div>
+            {profileNotif && <ProfileNotification />}
             <div className="w-8 h-8 overflow-hidden rounded-full">
               <Image
                 src="/img/img-profile.jpg"
@@ -116,7 +121,7 @@ const Navbar = () => {
                 height={500}
               />
             </div>
-            <div className="text-sm">John Doe</div>
+            <div className="text-sm select-none">John Doe</div>
           </div>
         </div>
       </div>

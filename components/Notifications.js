@@ -2,15 +2,9 @@ import { faBug, faEllipsisH } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
-const Notifications = ({ openNotif }) => {
+const Notifications = () => {
   return (
-    <div
-      className={
-        openNotif
-          ? "w-72 absolute bg-white shadow top-11 right-0 rounded-md overflow-hidden z-50"
-          : "hidden"
-      }
-    >
+    <div className="w-72 absolute bg-white shadow top-11 right-0 rounded-md overflow-hidden z-50">
       {/* HEAD */}
       <div className="flex justify-between bg-red-500 text-white px-3 py-1.5 text-xs">
         <div className="font-semibold">Notifikasi</div>

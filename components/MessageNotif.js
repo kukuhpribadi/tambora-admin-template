@@ -8,15 +8,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import Image from "next/image";
 
-const MessageNotif = ({ openMessageNotif }) => {
+const MessageNotif = () => {
   return (
-    <div
-      className={
-        openMessageNotif
-          ? "w-96 absolute bg-white shadow-md top-11 right-0 rounded-md overflow-hidden z-50"
-          : "hidden"
-      }
-    >
+    <div className="w-96 absolute bg-white shadow-md top-11 right-0 rounded-md overflow-hidden z-50">
       {/* HEAD */}
       <div className="flex justify-between bg-red-500 text-white px-3 py-1.5 text-xs">
         <div className="font-semibold">Pesan</div>
