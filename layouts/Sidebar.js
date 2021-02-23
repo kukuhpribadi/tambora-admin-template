@@ -29,11 +29,6 @@ const Sidebar = () => {
           nama="Komponen"
           childMenu={["card"]}
         />
-        <LinkSidebar
-          icon={faFileAlt}
-          nama="halaman"
-          childMenu={["blank", "404", "login", "register"]}
-        />
         <LinkSidebar icon={faHeart} nama="terimakasih" />
       </div>
     </div>

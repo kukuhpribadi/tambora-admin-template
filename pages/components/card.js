@@ -11,12 +11,13 @@ import {
   faWhatsapp,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
+import Footer from "../../layouts/Footer";
 
 const Card = () => {
   return (
     <div className="flex min-h-screen bg-gray-100">
       <Sidebar />
-      <div className="w-full">
+      <div className="w-full relative pb-24">
         <Navbar />
 
         <section className="p-5 grid md:grid-cols-2 gap-5 text-gray-600">
@@ -74,6 +75,7 @@ const Card = () => {
           <CardArticle />
           <CardImage />
         </section>
+        <Footer />
       </div>
     </div>
   );

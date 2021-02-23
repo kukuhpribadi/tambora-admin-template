@@ -1,5 +1,6 @@
 import React from "react";
 import CreditList from "../components/CreditList";
+import Footer from "../layouts/Footer";
 import Navbar from "../layouts/Navbar";
 import Sidebar from "../layouts/Sidebar";
 
@@ -7,7 +8,7 @@ const terimakasih = () => {
   return (
     <div className="flex min-h-screen bg-gray-100">
       <Sidebar />
-      <div className="w-full">
+      <div className="w-full relative pb-24">
         <Navbar />
         <section className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 px-5 gap-5 mt-5">
           {/* card */}
@@ -107,6 +108,7 @@ const terimakasih = () => {
             }
           />
         </section>
+        <Footer />
       </div>
     </div>
   );

@@ -12,6 +12,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import MailList from "../components/MailList";
 import MessageMenu from "../components/MessageMenu";
+import Footer from "../layouts/Footer";
 import Navbar from "../layouts/Navbar";
 import Sidebar from "../layouts/Sidebar";
 
@@ -19,7 +20,7 @@ const pesan = () => {
   return (
     <div className="flex min-h-screen bg-gray-100">
       <Sidebar />
-      <div className="w-full">
+      <div className="w-full relative pb-24">
         <Navbar />
         {/* Main content */}
         <section className="px-5 mt-5 text-gray-600">
@@ -112,7 +113,7 @@ const pesan = () => {
             </div>
           </div>
         </section>
-        <footer className="h-20"></footer>
+        <Footer />
       </div>
     </div>
   );
