@@ -90,6 +90,22 @@ const terimakasih = () => {
               </span>
             }
           />
+          {/* card */}
+          <CreditList
+            img="/img/img.jpg"
+            creator={
+              <span>
+                Photo by{" "}
+                <a href="https://unsplash.com/@williamkusno?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+                  william kusno
+                </a>{" "}
+                on{" "}
+                <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+                  Unsplash
+                </a>
+              </span>
+            }
+          />
         </section>
       </div>
     </div>

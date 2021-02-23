@@ -13,7 +13,7 @@ const MessageNotif = ({ openMessageNotif }) => {
     <div
       className={
         openMessageNotif
-          ? "w-96 absolute bg-white shadow-md top-11 right-0 rounded-md overflow-hidden"
+          ? "w-96 absolute bg-white shadow-md top-11 right-0 rounded-md overflow-hidden z-50"
           : "hidden"
       }
     >

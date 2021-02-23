@@ -53,7 +53,7 @@ const Chart = () => {
   };
 
   return (
-    <div className="card bg-white shadow-md rounded-md overflow-hidden text-gray-600">
+    <div className="card bg-white shadow-md rounded-md overflow-hidden text-gray-600 lg:col-span-2">
       {/* header */}
       <div className=" flex justify-between items-center px-5 h-16 ">
         <div className="font-bold ">Line chart</div>

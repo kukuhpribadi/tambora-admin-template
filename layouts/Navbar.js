@@ -85,7 +85,7 @@ const Navbar = () => {
             <div
               className={
                 profile
-                  ? "w-32 absolute bg-white shadow-md  top-12 right-0 rounded-md overflow-hidden flex flex-col py-3 px-3 gap-3"
+                  ? "w-32 absolute bg-white shadow-md  top-12 right-0 rounded-md overflow-hidden flex flex-col py-3 px-3 gap-3 z-50"
                   : "hidden"
               }
             >

@@ -4,8 +4,10 @@ import React from "react";
 
 const CardArticle = () => {
   return (
-    <div className="shadow-md bg-white rounded-md p-5 flex flex-col gap-1">
-      <div className="font-bold text-lg">Lorem ipsum dolor sit amet.</div>
+    <div className="shadow-md bg-white rounded-md py-5 px-7 flex flex-col gap-1">
+      <div className="font-bold text-lg">
+        Lorem ipsum dolor sit amet consectetur adip.
+      </div>
       <div className="flex justify-between text-sm mb-2">
         <div>
           <div>
@@ -22,13 +24,17 @@ const CardArticle = () => {
           <div>341 dilihat</div>
         </div>
       </div>
+      <hr />
       <div className="">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt
         voluptas quam fugiat sequi cum veniam provident vitae a inventore sed
         laborum, quidem, est suscipit molestias nam. Eaque ullam dolore deleniti
         nihil omnis, commodi accusamus. Laboriosam cum nam nostrum tenetur
         cumque minima autem commodi nisi, aspernatur architecto consectetur
-        rerum. Optio, amet!
+        rerum{" "}
+        <span className="text-blue-500 cursor-pointer font-bold">
+          read more
+        </span>
       </div>
     </div>
   );

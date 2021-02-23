@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faHeart, faShare } from "@fortawesome/free-solid-svg-icons";
 import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 
 const CardImage = () => {
@@ -20,7 +20,7 @@ const CardImage = () => {
         <div className="flex justify-between items-center pt-5 pb-3">
           <div>
             <div className="font-bold">Indonesia Bagus</div>
-            <div className="text-xs">
+            <div className="text-sm">
               17j lalu | by{" "}
               <span className="font-bold text-blue-500">John Doe</span>
             </div>
@@ -28,6 +28,9 @@ const CardImage = () => {
           <div className="flex gap-3">
             <div>
               <FontAwesomeIcon icon={faHeart} className="text-red-500" />
+            </div>
+            <div>
+              <FontAwesomeIcon icon={faShare} className="" />
             </div>
             <div>
               <FontAwesomeIcon icon={faBookmark} className="" />

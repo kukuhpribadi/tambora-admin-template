@@ -7,7 +7,7 @@ const Notifications = ({ openNotif }) => {
     <div
       className={
         openNotif
-          ? "w-72 absolute bg-white shadow top-11 right-0 rounded-md overflow-hidden"
+          ? "w-72 absolute bg-white shadow top-11 right-0 rounded-md overflow-hidden z-50"
           : "hidden"
       }
     >
