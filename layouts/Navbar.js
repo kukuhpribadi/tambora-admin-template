@@ -1,14 +1,7 @@
 import {
   faBell,
-  faEllipsisH,
   faEnvelope,
   faSearch,
-  faSign,
-  faSignInAlt,
-  faSignOutAlt,
-  faSmile,
-  faSmileBeam,
-  faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useRef, useState } from "react";
@@ -17,51 +10,40 @@ import Notifications from "../components/Notifications";
 import MessageNotif from "../components/MessageNotif";
 import ProfileNotification from "../components/ProfileNotification";
 
+let useClickOutside = (handler) => {
+  let domNode = useRef();
+  useEffect(() => {
+    let checkHandler = (event) => {
+      if (!domNode.current.contains(event.target)) {
+        handler();
+      }
+    };
+    document.addEventListener("click", checkHandler);
+    return () => {
+      document.removeEventListener("click", checkHandler);
+    };
+  }, []);
+  return domNode;
+};
+
 const Navbar = () => {
   const [notification, setNotification] = useState(false);
   const [messageNotif, setmessageNotif] = useState(false);
   const [profileNotif, setProfileNotif] = useState(false);
 
   // ref
-  const refNotification = useRef();
-  const refMessage = useRef();
-  const refProfile = useRef();
 
-  useEffect(() => {
-    const handler = (event) => {
-      if (!refNotification.current.contains(event.target)) {
-        setNotification(false);
-      }
-    };
-    document.addEventListener("click", handler);
-    return () => {
-      document.removeEventListener("click", handler);
-    };
-  }, [notification]);
+  let refNotif = useClickOutside(() => {
+    setNotification(false);
+  });
 
-  useEffect(() => {
-    const handler = (event) => {
-      if (!refMessage.current.contains(event.target)) {
-        setmessageNotif(false);
-      }
-    };
-    document.addEventListener("click", handler);
-    return () => {
-      document.removeEventListener("click", handler);
-    };
-  }, [messageNotif]);
+  const refMessage = useClickOutside(() => {
+    setmessageNotif(false);
+  });
 
-  useEffect(() => {
-    const handler = (event) => {
-      if (!refProfile.current.contains(event.target)) {
-        setProfileNotif(false);
-      }
-    };
-    document.addEventListener("click", handler);
-    return () => {
-      document.removeEventListener("click", handler);
-    };
-  }, [profileNotif]);
+  const refProfile = useClickOutside(() => {
+    setProfileNotif(false);
+  });
 
   return (
     <>
@@ -83,7 +65,7 @@ const Navbar = () => {
         <div className="flex flex-row gap-5 lg:gap-10 text-gray-500 items-center">
           {/* noitification */}
           <div className="flex gap-5">
-            <div className="select-none relative" ref={refNotification}>
+            <div className="select-none relative" ref={refNotif}>
               <div onClick={() => setNotification(!notification)}>
                 <FontAwesomeIcon
                   icon={faBell}
