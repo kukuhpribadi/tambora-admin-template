@@ -1,11 +1,9 @@
 import {
   faBug,
   faChalkboardTeacher,
-  faEdit,
   faEllipsisH,
   faEnvelope,
   faRunning,
-  faTrashAlt,
   faUsers,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

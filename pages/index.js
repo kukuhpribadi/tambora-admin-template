@@ -1,10 +1,10 @@
 import Myteam from "../components/Myteam";
-import Todo from "../components/Todo";
+import Todo from "../components/Card/Todo";
 import Chart from "../components/Chart";
 import Navbar from "../layouts/Navbar";
 import Sidebar from "../layouts/Sidebar";
-import Note from "../components/Note";
-import NotifBeranda from "../components/NotifBeranda";
+import Note from "../components/Card/Note";
+import NotifBeranda from "../components/Card/NotifBeranda";
 import Footer from "../layouts/Footer";
 
 export default function Home() {

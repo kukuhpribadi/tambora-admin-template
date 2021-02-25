@@ -27,7 +27,7 @@ const Sidebar = () => {
         <LinkSidebar
           icon={faPuzzlePiece}
           nama="Komponen"
-          childMenu={["card"]}
+          childMenu={["button", "card"]}
         />
         <LinkSidebar icon={faHeart} nama="terimakasih" />
       </div>
