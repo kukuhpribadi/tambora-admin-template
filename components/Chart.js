@@ -1,12 +1,11 @@
 import {
   faChartLine,
   faDollarSign,
-  faEllipsisH,
   faPhoneSlash,
 } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
-import { Line, Bar } from "react-chartjs-2";
+import React from "react";
+import { Line } from "react-chartjs-2";
+import HeaderCard from "../layouts/HeaderCard";
 import ChartInfo from "./ChartInfo";
 
 const Chart = () => {
@@ -55,12 +54,7 @@ const Chart = () => {
   return (
     <div className="card bg-white shadow-md rounded-md overflow-hidden text-gray-600 lg:col-span-2">
       {/* header */}
-      <div className=" flex justify-between items-center px-5 h-16 ">
-        <div className="font-bold ">Line chart</div>
-        <div className="text-gray-400">
-          <FontAwesomeIcon icon={faEllipsisH} />
-        </div>
-      </div>
+      <HeaderCard title="Line chart" />
       {/* body */}
       <div className="px-5 pt-2 pb-5 flex flex-col gap-10">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 ">

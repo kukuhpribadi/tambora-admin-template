@@ -9,7 +9,7 @@ const LinkSidebar = ({ icon, nama, childMenu, notifIcon }) => {
 
   useState(() => {
     // if (nama === "beranda") setUrl(`/`);
-    setUrl(nama === "beranda" ? "/" : `/${nama}`);
+    setUrl(nama === "dashboard" ? "/" : `/${nama}`);
     if (childMenu) {
       setUrl("#");
     }
@@ -24,12 +24,12 @@ const LinkSidebar = ({ icon, nama, childMenu, notifIcon }) => {
 
   return (
     <>
-      <Link href={url}>
+      <Link href={url.split(" ").join("-")}>
         <a
-          className="flex w-full text-white cursor-pointer items-center justify-center md:px-2 lg:px-5"
+          className="flex w-full text-white cursor-pointer items-center justify-center md:px-2 lg:px-5 gap-2"
           onClick={clickMenu}
         >
-          <div className="w-1/4">
+          <div className="w-1/4 text-center">
             <FontAwesomeIcon icon={icon} />
           </div>
           <div className="w-full hidden md:flex items-center justify-between select-none">
@@ -42,7 +42,7 @@ const LinkSidebar = ({ icon, nama, childMenu, notifIcon }) => {
               )}
               {notifIcon && (
                 <div className="text-xs font-bold bg-green-500 rounded-full px-1">
-                  new
+                  {notifIcon}
                 </div>
               )}
             </div>
@@ -59,7 +59,7 @@ const LinkSidebar = ({ icon, nama, childMenu, notifIcon }) => {
         >
           {childMenu.map((mn, index) => {
             return (
-              <Link href={`/components/${mn}`} key={index}>
+              <Link href={`/components/${mn.split(" ").join("-")}`} key={index}>
                 <a className="cursor-pointer hover:text-red-800 capitalize">
                   {mn}
                 </a>

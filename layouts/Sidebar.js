@@ -1,11 +1,11 @@
 import LinkSidebar from "../components/LinkSidebar";
 import {
   faEnvelope,
-  faFileAlt,
+  faFile,
   faHeart,
-  faHome,
   faMountain,
   faPuzzlePiece,
+  faTachometerAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -22,14 +22,15 @@ const Sidebar = () => {
       {/* menu wrapper */}
       <div className="w-full flex flex-col gap-7 text-lg md:text-sm lg:text-base">
         {/* menu */}
-        <LinkSidebar icon={faHome} nama="beranda" />
-        <LinkSidebar icon={faEnvelope} nama="pesan" notifIcon="15" />
+        <LinkSidebar icon={faTachometerAlt} nama="dashboard" />
+        <LinkSidebar icon={faFile} nama="blank page" />
+        <LinkSidebar icon={faEnvelope} nama="message" notifIcon="new" />
         <LinkSidebar
           icon={faPuzzlePiece}
-          nama="Komponen"
-          childMenu={["button", "card"]}
+          nama="component"
+          childMenu={["avatar", "button", "card"]}
         />
-        <LinkSidebar icon={faHeart} nama="terimakasih" />
+        <LinkSidebar icon={faHeart} nama="credit" />
       </div>
     </div>
   );

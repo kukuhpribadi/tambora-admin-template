@@ -2,17 +2,13 @@ import { faEllipsisH } from "@fortawesome/free-solid-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import HeaderCard from "../../layouts/HeaderCard";
 
 const Note = () => {
   return (
     <div className="card h-40 bg-white shadow-md rounded-md overflow-hidden text-gray-600">
       {/* header */}
-      <div className=" flex justify-between items-center px-5 h-16 ">
-        <div className="font-bold">Aktifitas terdekat</div>
-        <div className="text-gray-400">
-          <FontAwesomeIcon icon={faEllipsisH} />
-        </div>
-      </div>
+      <HeaderCard title="Note" />
       {/* body */}
       <div className="px-5 flex gap-5">
         <div className="bg-red-100 w-16 h-16 rounded-md flex flex-none justify-center items-center shadow-md">

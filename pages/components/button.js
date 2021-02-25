@@ -3,6 +3,7 @@ import CardButtonIcon from "../../components/Card/CardButtonIcon";
 import CardButtonOutline from "../../components/Card/CardButtonOutline";
 import CardButtonOutlineHover from "../../components/Card/CardButtonOutlineHover";
 import CardButtonSimple from "../../components/Card/CardButtonSimple";
+import CardButtonSize from "../../components/Card/CardButtonSize";
 import Footer from "../../layouts/Footer";
 import Navbar from "../../layouts/Navbar";
 import Sidebar from "../../layouts/Sidebar";
@@ -14,13 +15,12 @@ const button = () => {
       <div className="w-full relative pb-24">
         <Navbar />
         {/* main content */}
-        <section className="p-5 grid lg:grid-cols-2 gap-5 text-gray-600">
+        <section className="p-5 grid md:grid-cols-2 lg:grid-cols-3 gap-5 text-gray-600">
           <CardButtonSimple />
           <CardButtonOutline />
-        </section>
-        <section className="p-5 grid lg:grid-cols-2 gap-5 text-gray-600">
           <CardButtonIcon />
           <CardButtonOutlineHover />
+          <CardButtonSize />
         </section>
         <Footer />
       </div>

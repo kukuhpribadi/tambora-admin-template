@@ -4,7 +4,7 @@ import Footer from "../layouts/Footer";
 import Navbar from "../layouts/Navbar";
 import Sidebar from "../layouts/Sidebar";
 
-const terimakasih = () => {
+const credit = () => {
   return (
     <div className="flex min-h-screen bg-gray-100">
       <Sidebar />
@@ -114,4 +114,4 @@ const terimakasih = () => {
   );
 };
 
-export default terimakasih;
+export default credit;

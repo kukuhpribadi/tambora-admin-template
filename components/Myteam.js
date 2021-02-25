@@ -1,6 +1,7 @@
 import { faEllipsisH } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import HeaderCard from "../layouts/HeaderCard";
 import MyteamList from "./MyteamList";
 
 const Myteam = () => {
@@ -49,12 +50,7 @@ const Myteam = () => {
   return (
     <div className="card bg-white shadow-md rounded-md overflow-hidden text-gray-600 lg:col-span-2">
       {/* header */}
-      <div className=" flex justify-between items-center px-5 h-16">
-        <div className="font-bold">Tim pengembang</div>
-        <div className="text-gray-400">
-          <FontAwesomeIcon icon={faEllipsisH} />
-        </div>
-      </div>
+      <HeaderCard title="Developer" />
       {/* body */}
       <div className="px-5 pb-5 flex flex-col gap-5  overflow-x-auto scrollbar-thin scrollbar-thumb-rounded scrollbar-track-gray-100 scrollbar-thumb-gray-200">
         <table className="table-auto">

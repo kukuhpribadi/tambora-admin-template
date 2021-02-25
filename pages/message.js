@@ -1,11 +1,9 @@
 import {
   faAddressBook,
-  faEllipsisH,
   faEnvelope,
   faPaperPlane,
   faPencilAlt,
   faSortDown,
-  faStar,
   faTrash,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -16,7 +14,7 @@ import Footer from "../layouts/Footer";
 import Navbar from "../layouts/Navbar";
 import Sidebar from "../layouts/Sidebar";
 
-const pesan = () => {
+const message = () => {
   return (
     <div className="flex min-h-screen bg-gray-100">
       <Sidebar />
@@ -29,34 +27,30 @@ const pesan = () => {
             <div className="w-1/5 text-sm py-5 flex flex-none flex-col gap-7 shadow-md">
               {/* head */}
               <div className="px-5">
-                <h1 className="font-bold text-base">Pesan</h1>
+                <h1 className="font-bold text-base">Message</h1>
               </div>
               <div className="mx-5 bg-red-500 text-center cursor-pointer text-sm text-white font-semibold rounded-md shadow-md py-1">
-                + Buat pesan
+                + New message
               </div>
               {/* body */}
               <div className="">
                 <MessageMenu
                   icon={faAddressBook}
-                  nama="Kontak"
+                  nama="Contact"
                   active={false}
                 />
                 <MessageMenu
                   icon={faEnvelope}
-                  nama="Kotak masuk"
+                  nama="Inbox"
                   notif="21"
                   notifWarna="green"
                   active={true}
                 />
-                <MessageMenu
-                  icon={faPaperPlane}
-                  nama="Pesan terkirim"
-                  active={false}
-                />
+                <MessageMenu icon={faPaperPlane} nama="Outbox" active={false} />
                 <MessageMenu icon={faPencilAlt} nama="Draft" active={false} />
                 <MessageMenu
                   icon={faTrash}
-                  nama="Sampah"
+                  nama="Trash"
                   notif="137"
                   notifWarna="red"
                   active={false}
@@ -67,7 +61,7 @@ const pesan = () => {
             <div className="w-full flex flex-col gap-5 px-5 py-5">
               {/* head */}
               <div className="flex justify-between">
-                <h1 className="font-bold">Kotak masuk</h1>
+                <h1 className="font-bold">Inbox</h1>
                 <div>{/* <FontAwesomeIcon icon={faEllipsisH} /> */}</div>
               </div>
               {/* options */}
@@ -76,10 +70,10 @@ const pesan = () => {
                   <div className="pt-0.5">
                     <input type="checkbox" />
                   </div>
-                  <label>Pilih semua</label>
+                  <label>Select all</label>
                 </div>
                 <div className="flex gap-3 items-center">
-                  <div>Terbaru</div>
+                  <div>Newest</div>
                   <div>
                     <FontAwesomeIcon
                       icon={faSortDown}
@@ -103,10 +97,10 @@ const pesan = () => {
                   </thead>
                   <tbody>
                     <MailList nama="Bambang Pamungkas" />
-                    <MailList nama="Sugeng asdas" />
-                    <MailList nama="Sugeng asdas" />
-                    <MailList nama="Sugeng asdas" />
-                    <MailList nama="Sugeng asdas" />
+                    <MailList nama="Bambang Pamungkas" />
+                    <MailList nama="Bambang Pamungkas" />
+                    <MailList nama="Bambang Pamungkas" />
+                    <MailList nama="Bambang Pamungkas" />
                   </tbody>
                 </table>
               </div>
@@ -119,4 +113,4 @@ const pesan = () => {
   );
 };
 
-export default pesan;
+export default message;
