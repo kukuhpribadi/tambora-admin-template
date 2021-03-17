@@ -73,7 +73,7 @@ const Chart = () => {
           <ChartInfo
             icon={faDollarSign}
             warna="purple"
-            judul="Pendapatan"
+            judul="Income"
             keterangan="Rp. 7.595.000"
           />
         </div>
